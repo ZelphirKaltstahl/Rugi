@@ -1,0 +1,33 @@
+{
+    "sfen": "lnsgkgsnl/1r5b1/ppppppppp/9/9/9/PPPPPPPPP/1B5R1/LNSGKGSNL b - 1",
+    "move_in_position": {
+        "Normal": {
+            "from": {
+                "rank": 0, "file": 0, "piece": {
+                    "kind": "Lance",
+                    "owner": "Sente",
+                    "promoted": false
+                }
+            },
+            "to": {
+                "rank": 0, "file": 0, "piece": null
+            },
+            "promote": false
+        }
+    }
+}
+
+
+curl \
+--dump-header - \
+--header "Content-Type: application/json" \
+-X POST \
+--data "" \
+http://localhost:8000/try_move_with_position
+
+curl \
+--dump-header - \
+--header "Content-Type: application/json" \
+-X POST \
+--data "" \
+http://localhost:8000/try_move_with_position
