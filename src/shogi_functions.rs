@@ -5,6 +5,7 @@ pub fn is_valid_move_in_position(mut position: Position, move_in_position: Move)
     match position.make_move(&move_in_position) {
         Err(_move_err) => {
             println!("Position as SFEN: {}", position.to_sfen());
+            println!("Move: {}", move_in_position);
             println!("The move is not valid in the position.");
             false
         },
